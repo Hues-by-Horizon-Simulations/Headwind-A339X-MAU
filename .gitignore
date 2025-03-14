@@ -1,0 +1,42 @@
+# general exclusions
+.DS_Store
+
+# exclude changes to root directory
+*
+/.*/
+
+# Explicit inclusions
+!*/
+!/.github/**
+!/.vscode/**
+
+!.editorconfig
+!.eslintrc
+!.gitattributes
+!.gitignore
+!.npmrc
+!.prettierignore
+!.prettierrc.json
+
+!igniter.config.mjs
+!a333x-igniter.config.mjs
+!jsconfig.json
+
+!package.json
+!package-lock.json
+
+/hues-a339x-mau/*
+!/hues-a339x-mau/src/
+!/hues-a339x-mau/src/**
+
+!/scripts/**
+
+!/build-utils.js
+
+# explicit exclusions
+/.env
+node_modules/
+obj/
+target/
+*.tgz
+*.wasm

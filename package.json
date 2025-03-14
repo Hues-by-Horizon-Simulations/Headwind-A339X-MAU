@@ -1,0 +1,24 @@
+{
+  "name": "huess-livery-packages",
+  "version": "1.0.0",
+  "edition": "development",
+  "imports": {
+    "#build-utils": "./build-utils.js"
+  },
+  "scripts": {
+    "====== HUES A339X DAL LIVERY PACKAGE ====": "==========================================",
+    "build:copy-base-package-4k": "mkdir -p hues-a339x-mau/out/hues-livery-a339x-airmauritius-package && (rsync -a hues-a339x-mau/src/base/hues-livery-a339x-airmauritius-package-4k/ hues-a339x-mau/out/hues-livery-a339x-airmauritius-package/ || cp -a -u hues-a339x-mau/src/base/hues-livery-a339x-airmauritius-package-4k/ hues-a339x-mau/out/hues-livery-a339x-airmauritius-package/)",
+    "build:copy-base-package-8k": "mkdir -p hues-a339x-mau/out/hues-livery-a339x-airmauritius-package && (rsync -a hues-a339x-mau/src/base/hues-livery-a339x-airmauritius-package-8k/ hues-a339x-mau/out/hues-livery-a339x-airmauritius-package/ || cp -a -u hues-a339x-mau/src/base/hues-livery-a339x-airmauritius-package-8k/ hues-a339x-mau/out/hues-livery-a339x-airmauritius-package/)",
+    "build:manifest": "node scripts/build.js",
+    "====== COMMON ================": "==========================================",
+    "lint": "eslint --cache **/*.{js,mjs,jsx,ts,tsx}",
+    "lint-fix": "npm run lint -- --fix",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@flybywiresim/fragmenter": "^0.8.0",
+    "@flybywiresim/igniter": "^1.2.3",
+    "dotenv": "^16.3.1",
+    "fs-extra": "^11.2.0"
+  }
+}
